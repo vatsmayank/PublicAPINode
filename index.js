@@ -3,10 +3,10 @@
 var express = require('express'),
     path = require('path'),
     //configure = require('./server/configure_server'),
-    fs = require('fs'),
-    app = express(),
-    https = require('https'),
-    http = require('http');
+    //fs = require('fs'),
+    app = express();
+    //https = require('https'),
+    //http = require('http');
     //mongoose = require('mongoose');
 
 //const express = require('express');
