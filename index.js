@@ -12,11 +12,10 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/echo', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.expenseCategory ? req.body.result.parameters.expenseCategory : "Seems like some problem. Speak again."
+    var filedExpense = req.body.result && req.body.result.parameters && req.body.result.parameters.expenseCategory ? req.body.result.parameters.expenseCategory + " for unit cost " + req.body.result.parameters.unitCurrency.amount + " " + req.body.result.parameters.unitCurrency.currency + " filed. ": "Seems like some problem. Speak again."
     return res.json({
-        speech: speech,
-        displayText: speech,
-        source: 'webhook-echo-sample'
+        speech: filedExpense,
+        displayText: filedExpense
     });
 });
 
